@@ -16,7 +16,7 @@ defmodule ComputerWithBadImplementation do
 
   * `:+` - Wrong arity
   * `:-` - Wrong return type
-  * `:++ - Wrong function name
+  * `:++` - Wrong function name
 
   ### Wrong Arity
  

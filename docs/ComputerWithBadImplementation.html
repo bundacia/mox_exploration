@@ -1,0 +1,228 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.3">
+    <title>ComputerWithBadImplementation – computer v0.1.0</title>
+    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
+    
+    <script src="dist/sidebar_items-bfa82c9674.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="readme.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        computer
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">computer v0.1.0</small>
+        ComputerWithBadImplementation
+        
+      </h1>
+
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#exec/2">exec(atom, list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><h2>Examples</h2>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="exec/2">
+  
+  
+  <div class="detail-header">
+    <a href="#exec/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">exec(atom, list)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <h2 id="exec/2-examples" class="section-heading">
+  <a href="#exec/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; exec(:+, [2, 3])
+5
+iex&gt; exec(:++, [[2, 2, 2]])
+7
+iex&gt; exec(:-, [[10, 8]])
+2</code></pre>
+<h2 id="exec/2-details" class="section-heading">
+  <a href="#exec/2-details" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Details
+</h2>
+
+<p>This function makes several wrong assumptions about the behaviour implemented by its Calc.</p>
+<ul>
+<li><code class="inline">:+</code> - Wrong arity
+</li>
+<li><code class="inline">:-</code> - Wrong return type
+</li>
+<li><code class="inline">:++</code> - Wrong function name
+</li>
+</ul>
+<h3 id="exec/2-wrong-arity" class="section-heading">
+  <a href="#exec/2-wrong-arity" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Wrong Arity
+</h3>
+
+<p>The first mistake (wrong arity) causes the follwing exception in the tests:</p>
+<pre><code class="elixir">1) test exec :++ (ComputerWithBadImplementationTest)
+   test/computer_with_bad_implementation_test.exs:17
+   ** (ArgumentError) unknown function add_all/1 for mock CalcMock
+   code: CalcMock |&gt; expect(:add_all, fn [1, 1, 1] -&gt; 99 end)
+   stacktrace:
+     (mox) lib/mox.ex:298: Mox.add_expectation!/4
+     (mox) lib/mox.ex:264: Mox.expect/4
+     test/computer_with_bad_implementation_test.exs:18: (test)</code></pre>
+<h3 id="exec/2-wrong-return-type" class="section-heading">
+  <a href="#exec/2-wrong-return-type" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Wrong Return Type
+</h3>
+
+<p>The second mistake (wrong return type) does not cause the tests to fail or any warnings to be emited. Mox does no checking of the spec of the Mox’ed function to make sure the mock matches.</p>
+<h3 id="exec/2-wrong-function-name" class="section-heading">
+  <a href="#exec/2-wrong-function-name" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Wrong Function Name
+</h3>
+
+<p>The third mistake (wrong function name) causes this error:</p>
+<pre><code class="elixir">2) test exec :+ (ComputerWithBadImplementationTest)
+   test/computer_with_bad_implementation_test.exs:7
+   ** (ArgumentError) unknown function add/3 for mock CalcMock
+   code: CalcMock |&gt; expect(:add, fn 1, 1, :extra_arg -&gt; 99 end)
+   stacktrace:
+     (mox) lib/mox.ex:298: Mox.add_expectation!/4
+     (mox) lib/mox.ex:264: Mox.expect/4
+     test/computer_with_bad_implementation_test.exs:8: (test)</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-9bd040e5e5.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+

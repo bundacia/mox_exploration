@@ -1,0 +1,310 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.3">
+    <title>CalcWithBadBehaviour – computer v0.1.0</title>
+    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
+    
+    <script src="dist/sidebar_items-bfa82c9674.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="readme.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        computer
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">computer v0.1.0</small>
+        CalcWithBadBehaviour
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>This is an implementation of the <a href="CalcBehaviour.html"><code class="inline">CalcBehaviour</code></a> that strays from the behaviour in several ways.</p>
+<p>You can enable this implementation instead of the <a href="Calc.html"><code class="inline">Calc</code></a> module by setting <code class="inline">MIX_ENV</code> to <code class="inline">broken</code>.</p>
+<pre><code class="elixir">% MIX_ENV=broken iex -S mix</code></pre>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#addition/2">addition(n1, n2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the sum of two numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#difference/2">difference(n1, n2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns difference</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sum/1">sum(list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Adds a list of numbers</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="addition/2">
+  
+  
+  <div class="detail-header">
+    <a href="#addition/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">addition(n1, n2)</span>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>addition(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the sum of two numbers</p>
+<h2 id="addition/2-examples" class="section-heading">
+  <a href="#addition/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
+
+<pre><code class="iex elixir">iex&gt; addition(10, 5)
+15</code></pre>
+<h2 id="addition/2-details" class="section-heading">
+  <a href="#addition/2-details" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Details
+</h2>
+
+<p>This function name does not match the one in the spec (<code class="inline">add</code>) but we did remember the <code class="inline">@impl CalcBehaviour</code> attribute.</p>
+<p>We get the following compiler warnings:</p>
+<pre><code class="elixir">warning: got &quot;@impl CalcBehaviour&quot; for function addition/2 but this behaviour does not specify such callback. The known callbacks are:
+
+  * CalcBehaviour.add/2 (function)
+  * CalcBehaviour.diff/2 (function)
+  * CalcBehaviour.sum/1 (function)
+
+  lib/calc_with_bad_behaviour.ex:61
+
+warning: function add/2 required by behaviour CalcBehaviour is not implemented (in module CalcWithBadBehaviour)
+  lib/calc_with_bad_behaviour.ex:1</code></pre>
+<p>And we get the following dialyzer warning:</p>
+<pre><code class="elixir">lib/calc_with_bad_behaviour.ex:1: Undefined callback function add/2 (behaviour &#39;Elixir.CalcBehaviour&#39;)</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="difference/2">
+  
+  
+  <div class="detail-header">
+    <a href="#difference/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">difference(n1, n2)</span>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>difference(<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Returns difference</p>
+<h2 id="difference/2-examples" class="section-heading">
+  <a href="#difference/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
+
+<pre><code class="iex elixir">iex&gt; difference(10, 5)
+5</code></pre>
+<h2 id="difference/2-details" class="section-heading">
+  <a href="#difference/2-details" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Details
+</h2>
+
+<p>This function name does not match the one in the spec (<code class="inline">diff</code>) and we forgot to add the <code class="inline">@impl CalcBehaviour</code> attribute.</p>
+<p>We get the following compiler warning:</p>
+<pre><code class="elixir">warning: function diff/2 required by behaviour CalcBehaviour is not implemented (in module CalcWithBadBehaviour)
+  lib/calc_with_bad_behaviour.ex:1</code></pre>
+<p>And we get the following dialyzer warning:</p>
+<pre><code class="elixir">lib/calc_with_bad_behaviour.ex:1: Undefined callback function diff/2 (behaviour &#39;Elixir.CalcBehaviour&#39;)</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="sum/1">
+  
+  
+  <div class="detail-header">
+    <a href="#sum/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sum(list)</span>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>sum([<a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>(), ...]) :: {:ok, <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">number</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Adds a list of numbers.</p>
+<h2 id="sum/1-examples" class="section-heading">
+  <a href="#sum/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
+
+<pre><code class="iex elixir">iex&gt; sum([1, 2, 3])
+{:ok, 6}</code></pre>
+<h2 id="sum/1-details" class="section-heading">
+  <a href="#sum/1-details" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Details
+</h2>
+
+<p>This function does not correctly implement the <code class="inline">CalcBehaviour.sum</code>, returning a tuple instead of a number.</p>
+<p>The following dialyzer warnings are emitted:</p>
+<pre><code class="elixir">lib/calc_with_bad_behaviour.ex:5: The return type {&#39;ok&#39;,number()} in the specification of sum/1 is not a subtype of number(), which is the expected return type for the callback of the &#39;Elixir.CalcBehaviour&#39; behaviour
+lib/calc_with_bad_behaviour.ex:14: The inferred return type of sum/1 ({&#39;ok&#39;,number()}) has nothing in common with number(), which is the expected return type for the callback of the &#39;Elixir.CalcBehaviour&#39; behaviour</code></pre>
+<p>This happens even if we comment out the <code class="inline">@impl CalcBehaviour</code> attribute.</p>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-9bd040e5e5.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+

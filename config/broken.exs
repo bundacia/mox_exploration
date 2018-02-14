@@ -1,3 +1,3 @@
 use Mix.Config
 
-config :computer, calc: CalcWithBadBehaviour
+config :mox_exploration, calc: CalcWithBadBehaviour

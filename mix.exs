@@ -1,15 +1,16 @@
-defmodule Computer.MixProject do
+defmodule MoxExploration.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :computer,
+      app: :mox_exploration,
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       dialyzer: [plt_add_deps: :transitive],
       deps: deps(),
       docs: docs(),
+      aliases: [gh_docs: ["docs -o docs"]],
     ]
   end
 

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>Mock Exploration – computer v0.1.0</title>
+    <title>Mock Exploration – mox_exploration v0.1.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-bfa82c9674.js"></script>
+    <script src="dist/sidebar_items-b738178e96.js"></script>
     
     
     
@@ -32,7 +32,7 @@
   <a href="readme.html" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        computer
+        mox_exploration
       </h1>
       <h2 class="sidebar-projectVersion">
         v0.1.0
@@ -103,6 +103,24 @@
 <td style="text-align: left">Mock mock doesn’t match typespec</td><td style="text-align: left">🚫</td><td style="text-align: left">🚫</td><td style="text-align: left">🚫</td>
 </tr>
 </table>
+<p>Read <a href="https://bundacia.github.io/mox_exploration">the package docs</a> for full details.</p>
+<h2 id="usage" class="section-heading">
+  <a href="#usage" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Usage
+</h2>
+
+<p>Run compile and run dialyzer to see warnings. You’ll need to remove the <code class="inline">_build</code> file to make sure things really get compiled.</p>
+<pre><code class="elixir">rm -rf _build
+mix compile
+mix dialyzer
+mix test</code></pre>
+<h2 id="docs" class="section-heading">
+  <a href="#docs" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Docs
+</h2>
+
+<p>To regenerate the docs content for github run</p>
+<pre><code class="elixir">mix gh_docs</code></pre>
 
       <footer class="footer">
         <p>

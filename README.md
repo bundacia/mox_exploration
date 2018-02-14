@@ -15,3 +15,24 @@ To that end there is also a `CalcWithBadBehaviour` module that strays from the `
 | Mock doesn't match correct arity | 🚫 | 🚫 | ✅ |
 | Mock non-existant function | 🚫 | 🚫 | ✅ | 
 | Mock mock doesn't match typespec | 🚫 | 🚫 | 🚫 |
+
+Read [the package docs](https://bundacia.github.io/mox_exploration) for full details.
+
+## Usage
+
+Run compile and run dialyzer to see warnings. You'll need to remove the `_build` file to make sure things really get compiled.
+
+```
+rm -rf _build
+mix compile
+mix dialyzer
+mix test
+```
+
+## Docs
+
+To regenerate the docs content for github run
+
+```
+mix gh_docs
+```

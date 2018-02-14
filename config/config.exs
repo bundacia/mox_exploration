@@ -1,5 +1,5 @@
 use Mix.Config
 
-config :computer, calc: Calc
+config :mox_exploration, calc: Calc
 
 import_config "#{Mix.env}.exs"

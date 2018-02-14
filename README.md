@@ -15,6 +15,7 @@ To that end there is also a `CalcWithBadBehaviour` module that strays from the `
 | Mock doesn't match correct arity | 🚫 | 🚫 | ✅ |
 | Mock non-existant function | 🚫 | 🚫 | ✅ | 
 | Mock mock doesn't match typespec | 🚫 | 🚫 | 🚫 |
+| Module referenced in production config does not exist | 🚫 | 🚫 | 🚫 |
 
 Read [the package docs](https://bundacia.github.io/mox_exploration) for full details. Code is on [GitHub](https://github.com/bundacia/mox_exploration).
 

@@ -16,7 +16,7 @@ To that end there is also a `CalcWithBadBehaviour` module that strays from the `
 | Mock non-existant function | 🚫 | 🚫 | ✅ | 
 | Mock mock doesn't match typespec | 🚫 | 🚫 | 🚫 |
 
-Read [the package docs](https://bundacia.github.io/mox_exploration) for full details.
+Read [the package docs](https://bundacia.github.io/mox_exploration) for full details. Code is on [GitHub](https://github.com/bundacia/mox_exploration).
 
 ## Usage
 

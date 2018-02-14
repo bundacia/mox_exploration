@@ -33,7 +33,7 @@ defmodule MoxExploration.MixProject do
   def docs do
     [
       main: "readme",
-      # source_url: repo_url(),
+      source_url: "https://github.com/bundacia/mox_exploration",
       extras: ["README.md"]
     ]
   end

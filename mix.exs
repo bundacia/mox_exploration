@@ -8,7 +8,8 @@ defmodule Computer.MixProject do
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       dialyzer: [plt_add_deps: :transitive],
-      deps: deps()
+      deps: deps(),
+      docs: docs(),
     ]
   end
 
@@ -25,6 +26,14 @@ defmodule Computer.MixProject do
       {:mox, "~> 0.3", only: :test},
       {:dialyxir, "~> 0.5", only: :dev, runtime: false},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+    ]
+  end
+
+  def docs do
+    [
+      main: "readme",
+      # source_url: repo_url(),
+      extras: ["README.md"]
     ]
   end
 end

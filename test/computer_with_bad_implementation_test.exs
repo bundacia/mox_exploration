@@ -5,7 +5,7 @@ defmodule ComputerWithBadImplementationTest do
 
   describe "exec" do
     test ":+" do
-      CalcMock |> expect(:add, fn 1, 1 -> {:ok, 99} end)
+      CalcMock |> expect(:add, fn 1, 1, :extra_arg -> 99 end)
       assert exec(:+, [1, 1]) == 99
     end
 
@@ -15,7 +15,7 @@ defmodule ComputerWithBadImplementationTest do
     end
 
     test ":++" do
-      CalcMock |> expect(:sum, fn [1, 1, 1] -> {:ok, 99} end)
+      CalcMock |> expect(:add_all, fn [1, 1, 1] -> 99 end)
       assert exec(:++, [[1, 1, 1]]) == 99
     end
   end

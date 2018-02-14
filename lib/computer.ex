@@ -3,11 +3,11 @@ defmodule Computer do
   @doc """
   ## Examples
 
-      iex> calc(:+, [2, 3])
+      iex> exec(:+, [2, 3])
       5
-      iex> calc(:++, [[2, 2, 2]])
+      iex> exec(:++, [[2, 2, 2]])
       7
-      iex> calc(:-, [[10, 8]])
+      iex> exec(:-, [[10, 8]])
       2
   """
   def exec(op, args) do

@@ -12,6 +12,7 @@ To that end there is also a `CalcWithBadBehaviour` module that strays from the `
 | Behavior Implementation with missing function | ✅ | ✅ | 🚫 |
 | Behavior Implementation with mis-named function (with @impl tag) | ✅ | ✅ | 🚫 |
 | Behavior Implementation with mis-named function (and missing @impl) | ✅ | ✅ | 🚫 |
+| Behavior Implementation has no spec and doesn't match behaviour spec| 🚫 | ✅ | 🚫 
 | Mock doesn't match correct arity | 🚫 | 🚫 | ✅ |
 | Mock non-existant function | 🚫 | 🚫 | ✅ | 
 | Mock mock doesn't match typespec | 🚫 | 🚫 | 🚫 |

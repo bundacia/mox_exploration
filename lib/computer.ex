@@ -12,7 +12,7 @@ defmodule Computer do
   """
   def exec(op, args) do
     fun = calc_function(op)
-    apply Application.get_env(:computer, :calc), fun, args
+    apply Application.get_env(:mox_exploration, :calc), fun, args
   end
 
   defp calc_function(:+), do: :add

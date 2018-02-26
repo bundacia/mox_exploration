@@ -53,14 +53,14 @@ defmodule ComputerWithBadImplementation do
   ```
   """
   def exec(:+, [a, b]) do
-    Application.get_env(:computer, :calc).add(a, b, :extra_arg)
+    Application.get_env(:mox_exploration, :calc).add(a, b, :extra_arg)
   end
   def exec(:-, [a, b]) do
-    {:ok, result} = Application.get_env(:computer, :calc).diff(a, b)
+    {:ok, result} = Application.get_env(:mox_exploration, :calc).diff(a, b)
     result
   end
   def exec(:++, list) do
-    Application.get_env(:computer, :calc).add_all(list)
+    Application.get_env(:mox_exploration, :calc).add_all(list)
   end
 
 end
